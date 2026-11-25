@@ -6,6 +6,23 @@ Codex デスクトップアプリで使える、ファン制作のドット絵�
 
 ![8体のペットがまばたきしたり、手を振ったり、ジャンプしたりするショーケース](showcase/chiikawa-pets.gif)
 
+## 8種類のペットを1コマンドでインストール
+
+macOS または Linux で Python 3 を使います。
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | python3 - --lang ja
+```
+
+Windows PowerShell では次のコマンドを使います。
+
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | py - --lang ja
+```
+
+[インストーラー](install_pets.py)は配布 ZIP のチェックサムと `CODEX_HOME` を確認します。
+同名のフォルダーに異なるファイルがある場合はそのまま保持します。必要に応じて Codex を再起動し、**Settings → Appearance → Pets** を開いてください。
+
 ## ダウンロード
 
 [日本語版](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ja.zip) · [英語版](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-en.zip) · [韓国語版](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ko.zip)

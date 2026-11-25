@@ -6,6 +6,26 @@ Eight fan-made pixel pets for the Codex desktop app. Each pet includes nine anim
 
 ![Eight animated pets in a two-row gallery. The pets blink, wave, jump, work, and look around.](showcase/chiikawa-pets.gif)
 
+## Install all eight pets with one command
+
+macOS or Linux with Python 3 installed:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | python3 -
+```
+
+Windows (PowerShell with the Python launcher):
+
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | py -
+```
+
+Use `--lang ja` or `--lang ko` after the final `-` to use Japanese or Korean names.
+The [installer source](install_pets.py) checks the release ZIP checksum, respects `CODEX_HOME`
+and skips folders with different files. You can also download the script and run it
+with `--archive PATH` to use a previously downloaded ZIP.
+Restart Codex if needed, then open **Settings → Appearance → Pets**.
+
 ## Download
 
 | Pet names and descriptions in Codex | Install-ready ZIP |

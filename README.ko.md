@@ -6,6 +6,23 @@ Codex 데스크톱 앱에서 쓰는 팬메이드 먼작귀 픽셀 펫 8종입니
 
 ![펫 8종이 눈을 깜빡이고 손을 흔들고 점프하는 쇼케이스](showcase/chiikawa-pets.gif)
 
+## 명령 한 번으로 펫 8종 설치
+
+macOS 또는 Linux에서 Python 3으로 실행합니다.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | python3 - --lang ko
+```
+
+Windows PowerShell에서는 다음 명령을 사용합니다.
+
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | py - --lang ko
+```
+
+[설치 스크립트](install_pets.py)는 배포 ZIP의 체크섬을 확인하고 `CODEX_HOME`을 적용합니다.
+같은 이름에 다른 파일이 있으면 보존합니다. 필요하면 Codex를 다시 열고 **설정 → 모양 → 펫**에서 선택하세요.
+
 ## 다운로드
 
 [한국어 팩](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ko.zip) · [영어 팩](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-en.zip) · [일본어 팩](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ja.zip)
