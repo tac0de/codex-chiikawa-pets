@@ -1,4 +1,4 @@
-# Codex Pet Tools
+# Pet-making tools
 
 Normalize the apparent size of a local Codex v2 pet across animation states. Use a horizontal band through the face in each state to estimate scale, even when ears, limbs, or props make the full silhouette larger or smaller.
 

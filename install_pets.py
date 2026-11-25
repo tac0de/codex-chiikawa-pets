@@ -13,7 +13,7 @@ from urllib.error import URLError
 from urllib.request import urlopen
 from zipfile import BadZipFile, ZipFile
 
-RELEASE = "https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0"
+RELEASE = "https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0"
 CHECKSUMS = {
     "en": "fe7a0ba66a20b074c20c6e87e7f2eff0f34b6fb63f4f7d17de427a2d4e4f03a6",
     "ja": "3d5d2b000b16c67bea5c9e4a239f87d28033879d50b385b8a0f19f7147533e21",

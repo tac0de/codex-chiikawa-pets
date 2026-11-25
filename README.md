@@ -1,63 +1,40 @@
 # Chiikawa Pets for Codex
 
-**English** · [日本語](README.ja.md) · [한국어](README.ko.md)
+English · [한국어](README.ko.md) · [日本語](README.ja.md)
 
-Eight fan-made pixel pets for the Codex desktop app. Each pet includes nine animation states and 16 gaze directions.
+![Eight Chiikawa pixel pets in two rows, with their names in English, Japanese, and Korean.](showcase/thumbnail.png)
 
-![Eight animated pets in a two-row gallery. The pets blink, wave, jump, work, and look around.](showcase/chiikawa-pets.gif)
-
-## Install all eight pets with one command
-
-macOS or Linux with Python 3 installed:
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | python3 -
-```
-
-Windows (PowerShell with the Python launcher):
-
-```powershell
-Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | py -
-```
-
-Use `--lang ja` or `--lang ko` after the final `-` to use Japanese or Korean names.
-The [installer source](install_pets.py) checks the release ZIP checksum, respects `CODEX_HOME`
-and skips folders with different files. You can also download the script and run it
-with `--archive PATH` to use a previously downloaded ZIP.
-Restart Codex if needed, then open **Settings → Appearance → Pets**.
+Eight fan-made pixel pets for the Codex desktop app. Each has nine animations and 16 gaze directions. [Watch the animated preview](showcase/chiikawa-pets.gif)
 
 ## Download
 
-| Pet names and descriptions in Codex | Install-ready ZIP |
-| --- | --- |
-| English | [Download English pack](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-en.zip) |
-| 日本語 | [日本語版をダウンロード](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ja.zip) |
-| 한국어 | [한국어 팩 다운로드](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ko.zip) |
+[English ZIP](https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0/chiikawa-codex-pets-en.zip) · [한국어 ZIP](https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0/chiikawa-codex-pets-ko.zip) · [日本語 ZIP](https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0/chiikawa-codex-pets-ja.zip)
 
-All three packs contain the same eight pets. Choose one language. You can also copy an individual pet from [`pets/`](pets/) for the English version.
+1. Download and unzip one pack. Each pack contains all eight pets.
+2. Copy the eight pet folders into `~/.codex/pets/` (Windows `%USERPROFILE%\.codex\pets\`). Create the folder if needed. If you set `CODEX_HOME`, use its `pets` folder.
+3. Open **Settings → Appearance → Pets** in Codex. Restart Codex if the pets do not appear.
 
-## Install in Codex
+<details>
+<summary>Install with one command</summary>
 
-1. Download and extract a ZIP.
-2. Open your Codex pets folder. On macOS it defaults to `~/.codex/pets/`. On Windows it defaults to `%USERPROFILE%\.codex\pets\`. If you set `CODEX_HOME`, use its `pets` subfolder. Create the folder if needed.
-3. Copy the **individual pet folders** you want into that folder. For example, you should end up with `pets/chiikawa/pet.json` and `pets/chiikawa/spritesheet.webp`. To switch languages later, replace the matching pet's `pet.json` with the one from the language pack you want.
-4. Restart Codex if the list has not refreshed. Go to **Settings → Appearance → Pets** and select the pet.
+macOS or Linux with Python 3
 
-The ZIPs include everything needed for manual installation. For the sprite format and Python utilities, see the [Codex pet contract](https://github.com/openai/skills/blob/main/skills/.curated/hatch-pet/references/codex-pet-contract.md) and [tool documentation](TOOLS.md).
+```sh
+curl -fsSL https://raw.githubusercontent.com/tac0de/codex-chiikawa-pets/chiikawa-v1.1.0/install_pets.py | python3 -
+```
 
-## Characters
+Windows PowerShell with the Python launcher
 
-| English | 日本語 | 한국어 |
-| --- | --- | --- |
-| Usagi | うさぎ | 우사기 |
-| Chiikawa | ちいかわ | 치이카와 |
-| Hachiware | ハチワレ | 하치와레 |
-| Momonga | モモンガ | 모몽가 |
-| Kurimanju | くりまんじゅう | 쿠리만쥬 |
-| Rakko | ラッコ | 랏코 |
-| Shisa | シーサー | 시사 |
-| Furuhonya | 古本屋 | 헌책방 |
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-chiikawa-pets/chiikawa-v1.1.0/install_pets.py | py -
+```
+
+Append `--lang ko` or `--lang ja` to install Korean or Japanese names. The installer verifies the ZIP checksum and preserves existing pet folders with different files. [Installer source](install_pets.py)
+
+</details>
 
 ## Credits
 
-Unofficial fan project. Chiikawa and its characters are by Nagano (©nagano). The [MIT License](LICENSE) covers the Python tools. Character rights remain with their respective rights holders. [Official character credits](https://spiralcute.com/characters/chiikawa/)
+Unofficial fan project. Chiikawa and its characters are by Nagano (©nagano). The [MIT License](LICENSE) covers the Python tools. Character rights remain with their respective holders. [Official character credits](https://spiralcute.com/characters/chiikawa/)
+
+[Releases](https://github.com/tac0de/codex-chiikawa-pets/releases) · [Pet-making tools](TOOLS.md)

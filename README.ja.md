@@ -1,47 +1,40 @@
-# Codex 用ちいかわペット
+# Codex ちいかわペット
 
-[English](README.md) · **日本語** · [한국어](README.ko.md)
+[English](README.md) · [한국어](README.ko.md) · 日本語
 
-Codex デスクトップアプリで使える、ファン制作のドット絵ペット8体です。各ペットに9種類のアニメーションと16方向の視線を収録しています。
+![ちいかわのドット絵ペット8種類と、英語・日本語・韓国語の名前。](showcase/thumbnail.png)
 
-![8体のペットがまばたきしたり、手を振ったり、ジャンプしたりするショーケース](showcase/chiikawa-pets.gif)
-
-## 8種類のペットを1コマンドでインストール
-
-macOS または Linux で Python 3 を使います。
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | python3 - --lang ja
-```
-
-Windows PowerShell では次のコマンドを使います。
-
-```powershell
-Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-pet-tools/main/install_pets.py | py - --lang ja
-```
-
-[インストーラー](install_pets.py)は配布 ZIP のチェックサムと `CODEX_HOME` を確認します。
-同名のフォルダーに異なるファイルがある場合はそのまま保持します。必要に応じて Codex を再起動し、**Settings → Appearance → Pets** を開いてください。
+Codex デスクトップアプリ向けのファンメイドのドット絵ペット8種類です。それぞれ9種類の動きと16方向の視線に対応しています。[アニメーションを見る](showcase/chiikawa-pets.gif)
 
 ## ダウンロード
 
-[日本語版](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ja.zip) · [英語版](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-en.zip) · [韓国語版](https://github.com/tac0de/codex-pet-tools/releases/download/chiikawa-v1.0.0/chiikawa-codex-pets-ko.zip)
+[日本語 ZIP](https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0/chiikawa-codex-pets-ja.zip) · [英語 ZIP](https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0/chiikawa-codex-pets-en.zip) · [韓国語 ZIP](https://github.com/tac0de/codex-chiikawa-pets/releases/download/chiikawa-v1.1.0/chiikawa-codex-pets-ko.zip)
 
-どの ZIP にも同じ8体が入っています。Codex に表示されるペットの名前と説明に合わせて、言語を1つ選んでください。
+1. 好きな言語の ZIP を1つダウンロードして展開します。どの ZIP にも8種類すべて入っています。
+2. ペットのフォルダー8個を `~/.codex/pets/` にコピーします。Windows では `%USERPROFILE%\.codex\pets\` です。`CODEX_HOME` を設定している場合は、その下の `pets` フォルダーを使います。
+3. Codex の **Settings → Appearance → Pets** を開きます。ペットが表示されなければ、アプリを再起動してください。
 
-## インストール
+<details>
+<summary>1コマンドでインストール</summary>
 
-1. ZIP をダウンロードして展開します。
-2. Codex のペットフォルダを開きます。既定の場所は macOS では `~/.codex/pets/`、Windows では `%USERPROFILE%\.codex\pets\` です。`CODEX_HOME` を設定している場合は、その下の `pets` フォルダを使います。フォルダがなければ作成してください。
-3. 使いたいペットの**個別フォルダ**をコピーします。ちいかわの場合、`pets/chiikawa/pet.json` と `pets/chiikawa/spritesheet.webp` があることを確認します。後で表示言語を変えるには、該当するペットの `pet.json` を別の言語版のものに差し替えてください。
-4. 一覧に出ない場合は Codex を再起動します。**設定 → 外観 → ペット**（英語 UI では **Settings → Appearance → Pets**）から使いたいペットを選びます。
+macOS または Linux では Python 3 を使います。
 
-インストールには ZIP の中身だけで十分です。英語版は [`pets/`](pets/) から1体ずつコピーできます。[Python ツールの説明（英語）](TOOLS.md)
+```sh
+curl -fsSL https://raw.githubusercontent.com/tac0de/codex-chiikawa-pets/chiikawa-v1.1.0/install_pets.py | python3 - --lang ja
+```
 
-## 収録キャラクター
+Windows PowerShell では Python ランチャー `py` を使います。
 
-うさぎ、ちいかわ、ハチワレ、モモンガ、くりまんじゅう、ラッコ、シーサー、古本屋
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/tac0de/codex-chiikawa-pets/chiikawa-v1.1.0/install_pets.py | py - --lang ja
+```
+
+インストーラーは ZIP のチェックサムを検証し、内容が異なる既存のペットフォルダーは保持します。[インストーラーのソース](install_pets.py)
+
+</details>
 
 ## クレジット
 
-非公式のファン作品です。『ちいかわ』と登場キャラクターはナガノ氏の作品です（©nagano）。[MIT ライセンス](LICENSE)は Python ツールに適用されます。キャラクターの権利は各権利者に帰属します。[公式クレジット](https://spiralcute.com/characters/chiikawa/)
+非公式のファンプロジェクトです。ちいかわとキャラクターの原作者はナガノ（©nagano）です。[MIT ライセンス](LICENSE)は Python ツールに適用されます。キャラクターの権利はそれぞれの権利者に帰属します。[公式キャラクター情報](https://spiralcute.com/characters/chiikawa/)
+
+[リリース](https://github.com/tac0de/codex-chiikawa-pets/releases) · [ペット制作ツール](TOOLS.md)
